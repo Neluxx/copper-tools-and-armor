@@ -1,14 +1,6 @@
 name: Copper Tools and Armor
 version: 0.1.0
 
-pipeline:
-  - beet.contrib.render
-
-meta:
-  render:
-    data_pack:
-      - "**"
-
 data_pack:
   description: {"text":"Copper Tools and Armor\n1.21 - 1.21.8", "color":"gray"}
   pack_format: 48
