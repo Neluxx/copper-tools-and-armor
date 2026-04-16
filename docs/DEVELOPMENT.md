@@ -68,34 +68,37 @@ beet cache --clear
 ├── docs/
 ├── src/
 │   ├── datapack/          # Datapack source files
+│   │   └── v1_21/         # Overlay for overwrites
 │   └── resourcepack/      # Resourcepack source files
 ├── build/                 # Build output (git-ignored)
 ├── beet.yml               # Beet project configuration
-├── pyproject.toml         # Python project & dependency config
-└── spyglass.json          # Datapack helper plus extension config
+└── pyproject.toml         # Python project & dependency config
 ```
 
-## Configuration
+## Updating dependencies
 
-Pack format ranges are configured in `beet.yml`. The project currently targets:
+Dependencies are pinned in `uv.lock`. To pull in newer versions that still satisfy the constraints in `pyproject.toml`, use `uv lock --upgrade`.
 
-| Pack | Min format | Max format | Versions |
-|------|-----------|-----------|----------|
-| Data pack | 48 | 81 | 1.21 – 1.21.8 |
-| Resource pack | 34 | 64 | 1.21 – 1.21.8 |
+### Upgrade all dependencies
 
-Overlays are picked up automatically from subdirectories within the load path. Format ranges for overlays are set explicitly in `beet.yml`.
+Re-resolves every dependency to the latest compatible version and updates `uv.lock`.
 
-### Datapack Helper Plus
-
-This template includes a `spyglass.json` for the [Datapack Helper Plus](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server) VS Code extension:
-
-```json
-{
-  "env": {
-    "gameVersion": "Auto"
-  }
-}
+```powershell
+uv lock --upgrade
 ```
 
-With `"gameVersion": "Auto"`, DHP detects the target Minecraft version from your `pack.mcmeta` automatically. Since DHP can only validate against one version at a time, you can temporarily set `"gameVersion"` to a specific version (e.g. `"1.20.5"`) when you need to check code inside an overlay against that particular version.
+### Upgrade a single package
+
+Useful when you only want to bump one dependency without touching the rest of the lockfile.
+
+```powershell
+uv lock --upgrade-package beet
+```
+
+After upgrading, sync the virtual environment so the new versions are actually installed:
+
+```powershell
+uv sync
+```
+
+> Commit the updated `uv.lock` so other contributors get the same resolved versions.
