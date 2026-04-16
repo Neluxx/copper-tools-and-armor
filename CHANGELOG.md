@@ -20,3 +20,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 ### Dependencies
+
+## [v0.1.0](https://github.com/Neluxx/copper-tools-and-armor/releases/tag/v0.1.0) - 2026-03-24
+
+### Added
+* Copper tools, weapons, and armor (recipes, textures, item models with trims, and knowledge books)
+  * Stats balanced between stone/leather and iron
+* Copper equipment textures
+* Translations: EN (all variants), DE, AT, CH, FR, IT, ES, PL, NL, TR, PT, ID
