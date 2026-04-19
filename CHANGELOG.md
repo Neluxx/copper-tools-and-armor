@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Dependencies
 
-## [v0.1.0](https://github.com/Neluxx/copper-tools-and-armor/releases/tag/v0.1.0) - 2026-03-24
+## [v1.0.0](https://github.com/Neluxx/copper-tools-and-armor/releases/tag/v1.0.0) - 2026-04-19
 
 ### Added
 * Copper tools, weapons, and armor (recipes, textures, item models with trims, and knowledge books)
