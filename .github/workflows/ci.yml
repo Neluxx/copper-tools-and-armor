@@ -31,6 +31,3 @@ jobs:
 
       - name: Build standard datapack
         run: uvx beet build
-
-      - name: Build legacy datapack
-        run: uvx beet -p beet.legacy.yml build
