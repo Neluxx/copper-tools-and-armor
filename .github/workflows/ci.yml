@@ -30,4 +30,4 @@ jobs:
           enable-cache: true
 
       - name: Build standard datapack
-        run: uvx beet build
+        run: uv run --locked beet build
