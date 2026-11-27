@@ -43,4 +43,6 @@ This helps the project gain visibility and motivates further development and mai
 
 ## Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for commit conventions and guidelines.
+Contributions are welcome! Please read
+the [contributing guidelines](https://github.com/Neluxx/.github/blob/main/CONTRIBUTING.md) and
+the [development guide](https://github.com/Neluxx/.github/blob/main/docs/DATAPACK_DEVELOPMENT.md).
